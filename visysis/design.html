@@ -8,8 +8,11 @@
   <script type="text/javascript">
   $(document).ready(function(){
     $(".f_btn").click(function(){
-      var redir = $(this).attr('link');
-      window.open(redir, '_blank');
+      if ($(this).attr('link') != "")
+      {
+        var redir = $(this).attr('link');
+        window.open(redir, '_blank');
+      }
     });
   });
   </script>
