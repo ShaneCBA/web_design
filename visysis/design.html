@@ -5,6 +5,7 @@
 <head>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script type="text/javascript" src="jquery.js"></script>
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <style type="text/css">
   .welcometo
   {
@@ -17,6 +18,16 @@
     transform: translateX(-50%);
   }
   </style>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $("#burgmenu").click(function(){
+      $("#slidemenu").css("transform","translateX(0%)");
+    });
+    $("#closeslide").click(function(){
+      $("#slidemenu").css("transform","translateX(100%)");
+    });
+  });
+  </script>
 </head>
 <body>
   <div class="header">
@@ -24,10 +35,15 @@
       <span>Vis</span>ysis
     </div>
     <ul class="nav">
-      <li >About</li><li>Stuff</li>
+      <li >About</li><li>Stuff</li><li id="burgmenu"><i style="letter-spacing:0;" class="fa fa-bars"></i></li>
     </ul>
   </div>
-
+  <div id="slidemenu" style="box-shadow: 0px 0px 10px rgba(0,0,0,0.25);height: 100%;position: absolute;top: 0px;right: 0%;background-color:rebeccapurple;transition: 1s all;transform: translateX(100%);background-color:#44607B;box-sizing: border-box;color:white;z-index:10">
+    <i id="closeslide" style="display: block;text-align: right;padding:10px;background-color:#2C3B4A;" class="fa fa-times-circle-o"></i>
+    <div style="padding:10px;">Login/Register</div>
+    <div style="padding:10px;">Stuff</div>
+    <div style="padding:10px;">Lorem Ipsum</div>
+  </div>
   <div class="welcometo" style="">
     Welcome to
     <span style="font-size: 110;margin-left:10px">Visysis</span>
